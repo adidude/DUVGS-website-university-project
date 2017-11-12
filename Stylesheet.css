@@ -42,7 +42,7 @@
     border: 2px solid rgb(189, 189, 189);
     font-size:15px;
     cursor:pointer;
-    margin: 10px 10px;
+    margin: 10px 10px 10px 10px;
     padding:10px;
     border-radius: 20%;
     -webkit-transition-duration: 0.6s;
@@ -164,6 +164,14 @@ div p
     padding: 16px;
 }
 
+header img
+{
+    top:0;
+    float:right;
+    height:auto;
+    width:10%;
+}
+
 @keyframes textani 
 {
     0% {color: rgb(28, 201, 71);}
@@ -216,6 +224,12 @@ div p
     {
         left: 25%;
     }
+
+    header img
+    {
+        height:auto;
+        width:17%;
+    }
 }
 
 @media only screen and (max-width: 415px) 
@@ -244,23 +258,21 @@ div p
     }
 }
 
-@media only screen and (max-width: 402px) 
-{
-    div p 
-    {
-    font-size: 100%;
-    }
-}
-
 @media only screen and (max-width: 405px) 
 {
     .toside
     {
         background:url("Images/psback.png");
     }
+    
     .about
     {
         width:100%;
         left: 0;
+    }
+    
+    div p 
+    {
+    font-size: 100%;
     }
 }
