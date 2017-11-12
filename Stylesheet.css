@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=New+Rocker');
+@import url('https://fonts.googleapis.com/css?family=Raleway:700');
 
 .top
 {
@@ -21,7 +21,7 @@
 .top h1
 {
     color: rgb(61, 217, 228);
-    font-family: 'New Rocker', cursive;
+    font-family: 'Raleway', sans-serif;
     z-index: -1;
     text-align: center;
     margin: 0;
@@ -98,7 +98,7 @@
     color: rgb(0, 0, 0);
     text-align: justify;
     background-color: rgba(212, 220, 213, 0.72);
-    font-family: 'New Rocker', cursive;
+    font-family: 'Raleway', sans-serif;
     position: absolute;
     top: 150%;
     left: 50%;
