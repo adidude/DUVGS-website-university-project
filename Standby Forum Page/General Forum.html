@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>General Forum Page</title>
+	<meta charset="UTF-8">
+	<style>
+	body, html 
+    {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /*This sets the background of this page.*/
+    body{
+	background-image: url("Images/Arcade.jpg");
+	background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    color:rgb(0, 179, 116);
+    background-origin: border-box;
+    }
+    ul{
+    	list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		overflow: auto;
+		background-color: rgb(0, 179, 116);
+		font-size: 40px;
+	}
+
+	li{
+		float: left;
+		text-align: center;
+		border-left:1px solid white;
+		border-right: 1px solid white;
+
+	}
+
+	/*This sets the dropdown botton and dropdown animation.*/
+
+	li a, .dropbtn{
+		display: inline-block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	li a:hover:not(.active), .dropdown:hover .dropbtn{
+		background-color: grey;
+	}
+
+	li.dropdown{
+		display: inline-block;
+	}
+	.dropdown-content{
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+		font-size:35px;
+		/*animation: showup 7s 0.5;*/
+	}
+
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+	}
+
+	.dropdown-content a:hover{background-color:#f1f1f1 }
+
+	.dropdown:hover .dropdown-content{
+		display: block;
+	}
+
+
+	img.icons{
+		position:relative;
+		left:30px;
+		top: -30px;
+	}
+	/*This sets the format of each post.*/
+	p{
+		font-size: 20px;
+	}
+	p.topic{
+		position:relative;
+		left:230px;
+		width: 200px;
+		overflow: auto;
+		top: -120px;
+	}
+	p.last_post{
+		position:relative;
+		left: 560px;
+		width: 200px;
+		overflow: auto;
+		top: -200px;
+	}
+	p.posts{
+		position:relative;
+		left: 860px;
+		width: 200px;
+		overflow: auto;
+		top: -250px;
+	}
+	p.views{
+		position:relative;
+		left: 1130px;
+		width: 200px;
+		overflow: auto;
+		top: -290px;
+	}
+
+	
+
+	#paraX{
+				text-align: right;
+				color: navy;
+			}
+	* {
+	    box-sizing: border-box;
+	}
+	body {
+	  margin: 0;
+	  background-color: rgb(128,128,128);
+	}
+	/* Style the header */
+	.header {
+	    background-color: #f1f1f1;
+	    padding: 20px;
+	    text-align: center;
+	}
+	/* Style the top navigation bar */
+	.topnav {
+	    overflow: hidden;
+	    background-color: rgb(53,193,242);
+
+	}
+	/* Style the topnav links */
+	.topnav a {
+	    float: left;
+	    display: block;
+	    color: #f2f2f2;
+	    text-align: center;
+	    padding: 14px 16px;
+	    text-decoration: none;
+	}
+	/* Change color on hover */
+	.topnav a:hover {
+	    background-color: #ddd;
+	    color: black;
+	}
+	/* Create two unequal columns that floats next to each other */
+	.column {
+	    float: left;
+	    padding: 10px;
+	}
+	/* Left column */
+	.column.left {
+	    width: 75%;
+	}
+	/* Right column */
+	.column.right {
+	    width: 25%;
+	}
+	/* Clear floats after the columns */
+	.row:after {
+	    content: "";
+	    display: table; 
+	    clear: both;
+	}
+
+	/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+	@media (max-width: 600px) {
+	    .column.side, .column.middle {
+	        width: 100%;
+	    }
+	}
+	/* Style the footer */
+	.footer {
+	    background-color: #f1f1f1;
+	    padding: 10px;
+	    text-align: center;
+	}
+	.post{
+
+	}
+	table,th,td{
+		border:1px solid white;
+		border-collapse: collapse;
+		/*border-radius: 16px;*/
+		text-align: center;
+		
+	}
+	blockquote {
+		border:2px solid rgb(0, 179, 116);
+		height: 200px;
+	}
+	blockquote:hover{
+		border:5px solid rgb(0, 179, 116);
+	}
+	table{width: 100%;}
+	th,td{
+		padding: 8px;
+		border-bottom: 1px solid #ddd;
+		height: 10px;}
+	tr:hover{background-color: rgb(200,200,200);}
+	a{
+		color:rgb(0, 179, 116);
+		text-decoration: none;
+	}
+	/*This sets the format of searching bar.*/
+	input[type=text]{
+		width: 160px;
+		height: 50px;
+		text-align: left;
+		box-sizing: border-box;
+		border:2px solid #ccc;
+		border-radius: 4px;
+		font-size: 16px;
+		background-color: white;
+		background-image: url('search.png');
+		background-size: 10%;
+		background-position: 10px 10px;
+		background-repeat: no-repeat;
+		padding: 12px 20px 12px 40px;
+		-webkit-transition:width 0.4s ease-in-out;
+		transition: width 0.4s ease-in-out;
+	}
+	input[type=text]:focus{
+		width: 300px;
+	}
+	/*This sets certain item should be located in topright.*/
+
+	.topright{
+		position: absolute;
+		top: 20px;
+		right: 160px;
+		font-size: 18px;
+
+	}
+
+	.active{
+		background-color: rgb(251,232,107);
+	}
+</style>
+</head>
+<body>
+	<div class="header">
+		<h1 style="background-color: white;border-spacing: 0;border:0;padding: 0; margin: 0;">Game Society</h1>
+		<form class="topright"><input type="text" name="Search" placeholder="Searching.."></form>
+	</div>
+
+<!-- This is the top and main navigation bar serving for the whole website. -->
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Regulations</a></li>
+		<li><a href="#">Recommendation</a></li>
+		<li><a href="#">Store</a></li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">Sponsors</a></li>
+		<li><a href="#">Tips & Tricks</a></li>
+		<li class="active"><a href="#">Forum</a></li>
+		<li class="dropdown"><a href="#" class="dropbtn">More</a>
+			<div class="dropdown-content">
+				<a href="#">FAQ</a>
+				<a href="#">About</a>
+			</div></li>
+		</ul>
+		<hr>
+		<!-- This is the second navigation bar serving for only forum page and lead to different sub-forum with different focuses (In the example below, it is distinguished by the game platform.) -->
+		<ul>
+			<li class="active"><a href="#">Xbox One</a></li>
+			<li><a href="#">Xbox 360</a></li>
+			<li><a href="#">PS4</a></li>			
+			<li><a href="#">Wii</a></li>
+			<li><a href="#">Nitendo Switch</a></li>
+			<li><a href="#">PS Vita</a></li>
+			<li class="dropdown"><a href="#" class="dropbtn">More Consoles</a><div class="dropdown-content">
+				<a href="http://www.baidu.com">3DS</a>
+				<a href="http://www.google.com">PS3</a>
+			</div>
+		</li>
+	</ul>
+	<div class="row">
+		<!-- This is the left column of the whole page, contains the main content. -->
+		<div class="column left">
+			<div><p id="paraX">Try CSS Again</p></div>
+			<blockquote style="word-spacing: 200px;text-indent: 2em;font-size: 20px;height: 30px;"> <strong>Author Topic 	Last_Post 	Posts 	Views </strong></blockquote>
+			<!-- This is a post. -->
+			<blockquote>
+				<br><br>
+				<a href="Find the details of this post.">
+					<img class="icons" src=")icons/1.jpg" alt="Sorry, cannot find this user"  style="width: 70px;height: 102.7px;">
+				</a>
+				<a href="<the link of Post 3> " target="_blank" title="You can click for more information of this Post"><p class="topic">Xbox Association Board Rules </p>
+				</a>
+				<p class="last_post">MarsAlive</p>
+				<p class="posts">561</p>
+				<p class="views">605,720</p>
+			</blockquote>
+			<!-- This is a post. -->
+			<blockquote>
+				<br><br>
+				<a href="Find the details of this post.">
+					<img class="icons" src=")icons/2.png" alt="Sorry, cannot find this user"  style="width: 74px;height: 74px; ">
+				</a>
+				<a href="<the link of Post 3> " target="_blank" title="You can click for more information of this Post"><p class="topic">Post Your Gaming/Electronics Purchase!</p>
+				</a>
+				<p class="last_post">iambatman</p>
+				<p class="posts">5,561</p>
+				<p class="views">105,769</p>
+			</blockquote>
+			<!-- This is a post. -->
+			<blockquote>
+				<br><br>
+				<a href="Find the details of this post.">
+					<img class="icons" src=")icons/try.png" alt="Sorry, cannot find this user"  style="width: 75.2px;height: 96.3px;">
+				</a>
+				<a href="<the link of Post 3> " target="_blank" title="You can click for more information of this Post"><p class="topic">Xbox One Video Game Recommendation Thread </p></a>
+					<p class="last_post">thePrinceZelda</p>
+					<p class="posts">8,001</p>
+					<p class="views">195,7789</p>
+			</blockquote>
+			<!-- This is a post. -->
+
+			<blockquote>
+				<br><br>
+				<a href="Find the details of this post.">
+					<img class="icons" src=")icons/3.jpg" alt="Sorry, cannot find this user"  style="width: 64px;height: 82.5px;">
+				</a>
+				<a href="<the link of Post 3> " target="_blank" title="You can click for more information of this Post"><p class="topic">Does anyone still play xbox360? </p>
+				</a>
+				<p class="last_post">Epak_</p>
+				<p class="posts">76</p>
+				<p class="views">746</p>
+			</blockquote>
+			<!-- This is a post. -->
+
+			<blockquote>
+				<br><br>
+				<a href="Find the details of this post.">
+					<img class="icons" src=")icons/4.jpg" alt="Sorry, cannot find this user"  style="width: 60px;height: 85.7px;">
+				</a>
+				<a href="<the link of Post 3> " target="_blank" title="You can click for more information of this Post"><p class="topic">A Xbox 360 review of FIFA 18(Rarely Spotted!)</p></a>
+					<p class="last_post">CrimsonBrute</p>
+					<p class="posts">837</p>
+					<p class="views">6,356</p>
+				</blockquote>
+			</div>
+			<!-- This is the right column of this page, and contains the recommandation content. -->
+			<div class="column right">
+				<h2>You May Also Interseted in These:</h2>
+				<p>New Released Game in November in Xbox !</p>
+				<a href="http://www.w3school.com.cn/js/index.asp" title="Javascript Tuturial"><img src="Images/children.jpg" alt="Not found." height="320" width="480"></a><br>
+				<p>What can sony do to combat Microsoft ?</p>
+				<a href="http://www.w3school.com.cn/s.asp" title="Server Side Tuturial"><img src="Images/gaming.jpg" width="480" height="320"></a>
+			</div>
+		</div>
+		<!-- This is the footer. -->
+		<div class="footer">
+			<p>Contact Us Via Facebook,Instagram,Twitter and Etc.</p>
+		</div>
+	</body>
+	</html>
