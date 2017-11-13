@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:700');
+
+body {
+    background-image: url("images/Background.jpg");
+    font-family: 'Raleway', sans-serif;
+}
+
+div {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+
