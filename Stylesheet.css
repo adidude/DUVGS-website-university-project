@@ -13,6 +13,11 @@
     left: 0;
 } 
 
+nav
+{
+    font-family: 'Raleway', sans-serif;
+}
+
 .area
 {
     overflow: hidden;
