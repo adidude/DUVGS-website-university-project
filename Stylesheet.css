@@ -236,16 +236,6 @@ header img
     top: 100%;
     left: 0;
   }
-  
-.slideshow-container2
-{
-    width: 50%;
-    height: 50%;
-    position: absolute;
-    margin: 0;
-    top: 100%;
-    left: 50%;
-}
 
   /* Next & previous buttons */
   .prev, .next {
