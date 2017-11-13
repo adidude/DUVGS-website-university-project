@@ -21,6 +21,7 @@ nav
 .area
 {
     overflow: hidden;
+    z-index: 0;
 }
 
 .top h1
@@ -107,6 +108,7 @@ nav
     position: absolute;
     top: 152%;
     left: 50%;
+    z-index: 1;
     
 }
 
