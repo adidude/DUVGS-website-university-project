@@ -172,6 +172,11 @@ header img
     width:10%;
 }
 
+.changesize
+{
+    height: 450px;
+}
+
 @keyframes textani 
 {
     0% {color: rgb(28, 201, 71);}
@@ -194,18 +199,6 @@ header img
     70% {color: rgb(240, 163, 47);}
     84% {color: rgb(145, 12, 12);}
     100% {color: rgb(28, 201, 71);}
-}
-
-@keyframes showtext
-{
-   0% {transform: rotateY(180deg);}
-   100% {transform: rotateY(180deg);}
-}
-
-@-webkit-keyframes showtext
-{
-   0% {-webkit-transform: rotateY(180deg);}
-   100% {-webkit-transform: rotateY(180deg);}
 }
 
 @media screen and (max-height: 450px) {
